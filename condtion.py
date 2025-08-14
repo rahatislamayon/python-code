@@ -40,12 +40,20 @@
 #     print("The number is odd.")
 
 
-a=int(input("Enter a number: "))
-b=int(input("Enter another number: "))
-c=int(input("Enter a third number: "))
-if a>b and a>c:
-    print("The largest number is:", a)
-elif b>a and a.c:
-    print("the lergest number is",b)
+# a=int(input("Enter a number: "))
+# b=int(input("Enter another number: "))
+# c=int(input("Enter a third number: "))
+# if a>b and a>c:
+#     print("The largest number is:", a)
+# elif b>a and a.c:
+#     print("the lergest number is",b)
+# else:
+#     print("the largest number is",c)
+
+
+
+num=int(input("Enter a number: "))
+if num % 7==0 :
+    print("The number is divisible by 7.")
 else:
-    print("the largest number is",c)
+    print("The number is not divisible by 7.")

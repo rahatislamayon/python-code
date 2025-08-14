@@ -11,5 +11,5 @@ print(student) #['sourav', 3.1, 'lakshmipur', 20]
 
 
 
-num=[1,2,3,4,5,6,7,8,9,10]
+num=[1,2,3,4,5,6,7,8,9,10] #list Slicing.
 print(num[3:7])
