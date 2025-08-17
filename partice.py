@@ -23,8 +23,38 @@
 # gread=("A", "A", "B", "C", "A", "B", "A", "C", "A", "B")
 # print(gread.count("A")) 
 
-list=["E","B","C","A","D","F"]
-list.sort()
-print(list)
-list.sort(reverse=True)
-print(list)  # ['F', 'E', 'D', 'C', 'B', 'A']
+# list=["E","B","C","A","D","F"]
+# list.sort()
+# print(list)
+# list.sort(reverse=True)
+# print(list)  # ['F', 'E', 'D', 'C', 'B', 'A']
+
+
+
+num =[1,4,9,16,25,36,49,64,81,100]
+for i in num:
+    x =49
+    if i == x:
+        print("The number is found at index:", num.index(i))
+        break
+    print(i)
+    i+=1
+
+for el in num:
+    if el== 49:
+        print("the number is found")
+
+
+
+
+        i=0
+        for i in range(101,0,-1):
+            print(i)
+
+
+
+n=int(input("Enter a number: "))
+for i in range(1,100):
+ print(n * i)
+
+
