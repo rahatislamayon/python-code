@@ -58,3 +58,10 @@ for i in range(1,100):
  print(n * i)
 
 
+class bank:
+    def __init__(self, name, balance):
+        self.name = name
+        self.balance = balance
+
+    def get_blance(self):
+        return self.balance
