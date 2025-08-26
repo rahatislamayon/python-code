@@ -53,6 +53,8 @@ file.close()
 
 
 
+
+
 #with syntax
 
 with open("demo.txt","r") as file:
