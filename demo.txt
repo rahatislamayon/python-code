@@ -18,3 +18,5 @@ open a disk file for updating (reading and writing)
  file i/o
  file i/o
  file i/o
+ file i/o
+ file i/o
