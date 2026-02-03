@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .container {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  .box {
+    background: white;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 20px;
+    width: 45%;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+  .diagram {
+    position: relative;
+    height: 200px;
+    margin: 20px 0;
+  }
+  /* Charges */
+  .charge {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    z-index: 2;
+  }
+  .pos { background: #ff4d4d; top: 85px; left: 140px; }
+  .neg { background: #4d79ff; top: 85px; left: 60px; }
+  
+  /* Dipole Moment Arrow */
+  .p-arrow {
+    position: absolute;
+    height: 4px;
+    background: #2ecc71;
+    top: 98px;
+    left: 85px;
+    width: 55px;
+  }
+  .p-arrow::after {
+    content: '';
+    position: absolute;
+    right: -5px;
+    top: -6px;
+    border-left: 10px solid #2ecc71;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+  }
+
+  /* Electric Field Arrows */
+  .e-arrow {
+    position: absolute;
+    height: 4px;
+    background: #f39c12;
+  }
+  .e-arrow::after {
+    content: '';
+    position: absolute;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+  }
+
+  /* Bisector Specifics */
+  .bisector-line {
+    position: absolute;
+    width: 1px;
+    height: 150px;
+    border-left: 1px dashed #ccc;
+    left: 115px;
+    top: 25px;
+  }
+  .e-bisector {
+    width: 60px;
+    top: 40px;
+    left: 85px;
+  }
+  .e-bisector::after {
+    left: -5px;
+    border-right: 10px solid #f39c12;
+  }
+
+  /* Axial Specifics */
+  .axial-line {
+    position: absolute;
+    width: 200px;
+    height: 1px;
+    border-top: 1px dashed #ccc;
+    top: 100px;
+    left: 15px;
+  }
+  .e-axial {
+    width: 80px;
+    top: 98px;
+    left: 180px;
+  }
+  .e-axial::after {
+    right: -5px;
+    border-left: 10px solid #f39c12;
+  }
+
+  .label { font-size: 0.9em; margin-top: 5px; }
+  .math { font-style: italic; color: #555; font-weight: bold; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="box">
+    <h3>Perpendicular Bisector</h3>
+    <div class="diagram">
+      <div class="bisector-line"></div>
+      <div class="charge neg">-q</div>
+      <div class="charge pos">+q</div>
+      <div class="p-arrow"></div>
+      <div class="e-arrow e-bisector"></div>
+      <div style="position:absolute; top:80px; left:105px; color:#2ecc71; font-weight:bold;">p</div>
+      <div style="position:absolute; top:20px; left:105px; color:#f39c12; font-weight:bold;">E</div>
+    </div>
+    <div class="math">E = kp / r³</div>
+    <div class="label">Field is <b>Opposite</b> to p</div>
+  </div>
+
+  <div class="box">
+    <h3>Dipole Axis</h3>
+    <div class="diagram">
+      <div class="axial-line"></div>
+      <div class="charge neg">-q</div>
+      <div class="charge pos">+q</div>
+      <div class="p-arrow"></div>
+      <div class="e-arrow e-axial"></div>
+      <div style="position:absolute; top:80px; left:105px; color:#2ecc71; font-weight:bold;">p</div>
+      <div style="position:absolute; top:80px; left:210px; color:#f39c12; font-weight:bold;">E</div>
+    </div>
+    <div class="math">E = 2kp / r³</div>
+    <div class="label">Field is in <b>Same Direction</b> as p</div>
+  </div>
+</div>
+
+</body>
+</html>
